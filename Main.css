@@ -1,0 +1,195 @@
+@font-face {
+    font-family: Foldit;
+    src: url(fonts/Foldit/Foldit-VariableFont_wght.ttf);
+}
+html{
+    scrollbar-width: none;
+}
+*{
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+header{
+    position:sticky;
+    top: 0px;
+    height: 7vh;
+    overflow-y: hidden;
+    z-index: 2;
+}
+header .shadow{
+    bottom: -15px;
+    box-shadow: 0 1px 20px black;
+}
+.shadow{
+    position: absolute;
+    height: 15px;
+    width: 100%;
+    z-index: 2;
+}
+#window{
+    min-height: 86vh;
+    position: relative;
+}
+.bgimg{
+    z-index: -100;
+    background: url(https://vectorportal.com/storage/business-background-hand-dr.jpg);
+    background: none;
+    background-color: white;
+    position: absolute;
+    background-repeat: repeat;
+    background-size: 40%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    content: "";
+    mask-image: linear-gradient(90deg,rgba(237, 221, 83, 0) 0%, rgba(255, 255, 255, 1) 30%,  rgba(255, 255, 255, 1) 70%, rgba(237, 221, 83, 0) 100%);
+    filter: blur(3px);
+}
+main{
+    width: 80vw;
+    /* height: 100vh; */
+    margin: auto;
+}
+main > section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+main > section h2{
+    color: transparent;
+    height: fit-content;
+    display: inline-block;
+    text-shadow: -30ch 0 0px white, 0ch 0 0px white, 30ch 0 0px white, 60ch 0 0px white, 90ch 0 0px white, 120ch 0 0px white, 150ch 0 0px white;
+    /* animation: banner 3s linear 0s infinite normal forwards; */
+    position: relative;
+    bottom: -3px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-box: trim-start cap alphabetic;
+}
+main > section:nth-child(2n) h2{
+
+    animation: banner 3s linear 0s infinite reverse forwards;
+   
+}
+main > section:nth-child(2n+1) h2{
+
+    animation: banner 3s linear 0s infinite normal forwards;
+
+}
+.hed{
+    justify-content: flex-start;
+    align-items: center;
+    background-color: black;
+    width: 120vw;
+    height: 5vh;
+    position: relative;
+    left: -20vw;
+    margin: 0;
+    margin-top: 10px;
+}
+main > section > div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+}
+.proj{
+    height: 15vh;
+    width: 100%;
+    margin-top: 20px;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    box-shadow: 0 0 1px black;
+    overflow: hidden;
+    color: black;
+    border-radius: 2px;
+}
+
+.proj:hover{
+    cursor: pointer;
+}
+.proj > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: filter 0.5s ease 10ms, transform 0.5s ease 10ms;
+}
+.proj:hover > img{
+    filter: blur(20px);
+    transform: scale(1.3);
+}
+.proj > div{
+    height: fit-content;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.proj > div{
+    top: 7vh;
+    opacity: 0;
+    transition: top 1s ease 10ms, opacity 0.8s ease 0ms;
+}
+.proj:hover > div{
+    opacity: 1;
+    top: 2vh;
+    transition: top 1s ease 10ms, opacity 0.6s ease 0ms;
+}
+footer{
+    display: grid;
+    grid-template-columns: 3fr 3fr 4fr;
+    grid-template-rows: 1fr;
+    position: sticky;
+    bottom: 0;
+    height: 7vh;
+    overflow-y: hidden;
+    align-items: end;
+}
+footer .shadow{
+    top: -15px;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+}
+footer h3{
+    position: relative;
+    bottom: 0px;
+    text-box: trim-end cap alphabetic;
+    width: 30vw;
+    /* font-family: Foldit; */
+    font-weight: bold;
+    font-size: 70px;
+}
+.behind{
+    background-color: rgb(187, 187, 187);
+}
+.behind *{
+    z-index: 100;
+}
+.behind::before{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRHs5A-qpc4cH_O4Qthqzb0n6BokcyXqO-7A&s);
+    background: none;
+    background: url(https://vectorportal.com/storage/business-background-hand-dr.jpg);
+    background-repeat: repeat;
+    filter: blur(0px) contrast(30%) brightness(200%);
+}
+@keyframes banner {
+    to{text-shadow:  0ch 0 0px white, 30ch 0 0px white, 60ch 0 0px white, 90ch 0 0px white, 120ch 0 0px white, 150ch 0 0px white, 180ch 0 0px white;}
+    
+}
